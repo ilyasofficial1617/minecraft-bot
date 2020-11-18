@@ -19,7 +19,7 @@ function onCollect (player, entity) {
     bot.removeListener('playerCollect', onCollect)
     startFishing()
     fishingCount++;
-    //setTimeout(startFishing, 1000);
+    console.log(entity.toString())
   }
 }
 
