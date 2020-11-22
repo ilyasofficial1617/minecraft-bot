@@ -42,6 +42,7 @@ function cutTrees() {
 		  else
 		    //collectGrass() // Collect another log
 			cutting = false
+			cutTrees();
 		})
 	}
 	cutting = true;
@@ -52,8 +53,8 @@ function cutTrees() {
 
 // On spawn, start collecting all nearby log
 bot.once('spawn', function(){
-	//cutTrees();
-	setInterval(cutTrees,500);
+	cutTrees();
+	//setInterval(cutTrees,500);
 })
 //interactive message
 bot.on('message',(cm) =>{
